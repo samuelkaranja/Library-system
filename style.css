@@ -1,0 +1,249 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*..........section 1..............*/
+.header{
+	background-color: lightgrey;
+	border-bottom: 2px solid grey;
+	padding-top: 0px;
+	padding-bottom: 90px;
+}
+
+.logo{
+	float: left;
+	padding: 12px 0 20px 40px;
+	font-family: cursive;
+}
+
+.logo a{
+	text-decoration: none;
+	color: orange;
+}
+
+.nav{
+	float: right;
+	padding: 30px 50px 0  0;
+}
+
+.nav li{
+	list-style-type: none;
+	display: inline;
+	padding: 20px;
+}
+
+.nav li a{
+	text-decoration: none;
+	color: black;
+}
+
+.nav li a:hover{
+	color:orange;
+}
+
+.btn{
+	background-color: orange;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	border-radius: 5px;
+	border:none;
+}
+
+.btn a{
+	text-decoration: none;
+	color: white;
+}
+
+/*...........section 2.............*/
+.sec_2{
+	width: 100%;
+	height: 700px;
+	background-image: url('img/lib1.jpg');
+}
+
+/*........footer.......*/
+footer{
+	color: black;
+	text-align: center;
+	border: none;
+	background-color: #c13939;
+	padding: 20px;
+}
+
+/*...........admin login..........*/
+.frm{
+	text-align: center;
+	margin: 142px 0px 227px 0px;
+}
+
+.input{
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+}
+
+.btn{
+	background-color: orange;
+	color: white;
+	border:none;
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px;
+}
+
+.head1{
+	color: orange;
+	padding:5px 0px 5px 0px;
+	text-align: center;
+	font-size: 20px;
+	font-size: bold;
+}
+
+/*.........student login.......*/
+.frm1{
+	text-align: center;
+	margin: 142px 0px 228px 0px;
+}
+
+.head2{
+	color: orange;
+	padding:5px 0px 5px 0px;
+	text-align: center;
+	font-size: 20px;
+	font-size: bold;
+}
+
+/*..........student signup...........*/
+
+.sign{
+	text-align: center;
+	padding: 0px 0px 10px 0px;
+}
+
+.head3{
+	color: orange;
+	padding:5px 0px 5px 0px;
+	text-align: center;
+	font-size: 20px;
+	font-size: bold;
+}
+
+/*.......student details...........*/
+.srch{
+	margin: 20px 0px 0px 1200px;
+}
+
+.dlt{
+	margin:10px 0px 0px 1200px;
+}
+
+.btn1{
+	background-color: orangered;
+	color: white;
+	border:none;
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px;
+}
+
+.btn2{
+	background-color: seagreen;
+	color: white;
+	border:none;
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px;
+}
+
+.tbl{
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th{
+	border: 1px solid black;
+	padding: 10px;
+	background-color: ;
+}
+
+td{
+	border: 1px solid black;
+	padding: 10px;
+	background-color: ;
+}
+
+/*.........edit books..........*/
+.edit{
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+/*..........view page........*/
+.box{
+	border:none;
+	margin:20px 500px 20px 500px;
+	text-align: center;
+	padding: 20px;
+	background-color:orange ;
+	box-shadow: 5px 5px 5px 5px grey;
+}
+
+.link{
+	text-decoration: none;
+	color: black;
+}
+
+.back{
+	
+}
+
+.bck_btn{
+	background-color: orange;
+	border:none;
+	padding: 10px;
+	border-radius:5px;
+	margin-top: 5px; 
+}
+
+.bck_btn a{
+	text-decoration: none;
+	color: black;
+}
+
+/*.......navbar........*/
+.head{
+	background-color: lightgrey;
+	border-bottom: 2px solid grey;
+	padding-top: 0px;
+	padding-bottom: 90px;
+}
+
+.log{
+	float: left;
+	padding: 12px 0 20px 40px;
+	font-family: cursive;
+}
+
+.log a{
+	text-decoration: none;
+	color: orange;
+}
+
+.navbar{
+	float: right;
+	padding: 30px 50px 0  0;
+}
+
+.navbar li{
+	list-style-type: none;
+	display: inline;
+	padding: 20px;
+}
+
+.navbar li a{
+	text-decoration: none;
+	color: black;
+}
+
+.navbar li a:hover{
+	
+}
