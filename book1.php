@@ -22,10 +22,12 @@
 
 	<div class="dlt">
 		<form method="post" action="">
-			<input class="input" type="text" name="delt" placeholder="Delete book....." required="">
+			<input class="input" type="text" name="delt" placeholder="Book name....." required="">
 			<button type="submit" class="btn1" name="delete">delete</button>
 		</form>
 	</div>
+
+				<!-- Search bar code -->
 
 	<?php 
 		if (isset($_POST['search'])) {
@@ -37,39 +39,94 @@
 
 				echo "Sorry! No book found. Try again";
 				
+			}else{
+	?>
+			<div>
+				<table class="tbl">
+					<h2 class="head2">BOOKS</h2>
+					<tr>
+						<th>ID</th>
+						<th>Book Name</th>
+						<th>Authors Name</th>
+						<th>Edition</th>
+						<th>Status</th>
+						<th>Quantity</th>
+						<th>Department</th>
+					</tr>
+			<?php
+				while($row = mysqli_fetch_array($res)){
+			?>
+					<tr>
+						<td><?php echo $row['ID'] ?></td>
+						<td><?php echo $row['BookName'] ?></td>
+						<td><?php echo $row['AuthorsName'] ?></td>
+						<td><?php echo $row['Edition'] ?></td>
+						<td><?php echo $row['Status'] ?></td>
+						<td><?php echo $row['Quantity'] ?></td>
+						<td><?php echo $row['Department'] ?></td>
+					</tr>
+			<?php
+				};
+			?>
+				</table>
+		</div>
+	<?php
 			}
+		}else{
+	?>
+		<div>
+			<table class="tbl">
+				<h2 class="head2">BOOKS</h2>
+				<tr>
+					<th>ID</th>
+					<th>Book Name</th>
+					<th>Authors Name</th>
+					<th>Edition</th>
+					<th>Status</th>
+					<th>Quantity</th>
+					<th>Department</th>
+				</tr>
+		<?php
+			while($row = mysqli_fetch_array($result)){
+		?>
+				<tr>
+					<td><?php echo $row['ID'] ?></td>
+					<td><?php echo $row['BookName'] ?></td>
+					<td><?php echo $row['AuthorsName'] ?></td>
+					<td><?php echo $row['Edition'] ?></td>
+					<td><?php echo $row['Status'] ?></td>
+					<td><?php echo $row['Quantity'] ?></td>
+					<td><?php echo $row['Department'] ?></td>
+				</tr>
+		<?php
+			};
+		?>
+			</table>
+		</div>
+	<?php
 		}
 	?>
 
-	<div>
-		<table class="tbl">
-			<h2 class="head2">BOOKS</h2>
-			<tr>
-				<th>ID</th>
-				<th>Book Name</th>
-				<th>Authors Name</th>
-				<th>Edition</th>
-				<th>Status</th>
-				<th>Quantity</th>
-				<th>Department</th>
-			</tr>
+					<!-- Delete bar code -->
+
 	<?php
-		while($row = mysqli_fetch_array($result)){
+		if (isset($_POST['delete'])) {
+			
+			$sql = "DELETE FROM `books` WHERE BookName LIKE '%$_POST[delt]%'";
+			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+			if (!$res) {
+				
+				echo "Book not deleted";
+			}else{
 	?>
-			<tr>
-				<td><?php echo $row['ID'] ?></td>
-				<td><?php echo $row['BookName'] ?></td>
-				<td><?php echo $row['AuthorsName'] ?></td>
-				<td><?php echo $row['Edition'] ?></td>
-				<td><?php echo $row['Status'] ?></td>
-				<td><?php echo $row['Quantity'] ?></td>
-				<td><?php echo $row['Department'] ?></td>
-			</tr>
+				<script>
+					alert('Book deleted');
+				</script>
 	<?php
-		};
+			}
+		}
 	?>
-		</table>
-	</div>
 
 	<div class="back">
 		<button class="bck_btn"><a href="view.php">Back</a></button>

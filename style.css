@@ -77,7 +77,7 @@ html,body{
 	height: 400px;
 	background-color: black;
 	opacity: 0.7;
-	margin: 150px 0px 0px 530px;
+	margin: 100px 0px 0px 530px;
 	position: absolute;
 	border-radius: 10px;
 	text-align: center;
@@ -196,9 +196,9 @@ footer{
 
 .tbl{
 	text-align: center;
-	width: 90%;
+	width: 100%;
 	border-collapse: collapse;
-	margin: 0px 30px 0px 30px;
+	/*margin: 0px 30px 0px 30px;*/
 }
 
 th{
@@ -235,10 +235,6 @@ td{
 	color: black;
 }
 
-.back{
-	
-}
-
 .bck_btn{
 	background-color: orange;
 	border:none;
@@ -250,4 +246,16 @@ td{
 .bck_btn a{
 	text-decoration: none;
 	color: black;
+}
+
+/*.......profile........*/
+.head4{
+	text-align: center;
+	font-weight: bold;
+}
+
+.tble{
+	width: 500px;
+	text-align: center;
+	margin: 0px 0px 0px 680px;
 }

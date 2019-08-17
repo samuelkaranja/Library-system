@@ -27,16 +27,19 @@
 
 	<?php
 		if (isset($_POST['submit'])) {
+
 			$count = 0;
 
-			$sql = "SELECT Username FROM student";
+			$sql = "SELECT `Username` FROM `student`";
 			$res = mysqli_query($conn, $sql);
 
 			// fetch associative(assoc) array
 			while ($row = mysqli_fetch_assoc($res)) { 
 
-				if ($row['username'] == $_POST['uname']) {
+				if ($row['Username'] == $_POST['uname']) {
+
 					$count = $count + 1;
+
 				}
 			}
 
@@ -46,9 +49,13 @@
 				$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 				if (!$result) {
+
 					echo "Sign up not successful";
+
 				}else{
+
 					echo "Sign up successful";
+
 				}
 			}else{
 	?>

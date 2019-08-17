@@ -24,7 +24,7 @@
 					<li><a href="index.php">HOME</a></li>
 					<li><a href="books.php">BOOKS</a></li>
 					<li><a href="fine.php">FINE</a></li>
-					<li><a href="admin_login.php">ADMIN</a></li>
+					<li><a href="profile.php">PROFILE</a></li>
 				</ul>
 			</div>
 			<div class="name">
