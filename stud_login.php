@@ -1,6 +1,6 @@
 <?php
 	include "connect.php";
-	session_start();
+	include "navbar.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,24 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="header">
-		<div class="logo">
-			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
-		</div>
-
-		<div class="nav">
-					<button class="btn"><a href="admin_login.php">ADMIN LOGIN</a></button>
-					<button class="btn"><a href="signup.php">SIGN UP</a></button>
-			</div>
-	</div>
-
 	<div class="frm1">
 		<form method="post" action="" onsubmit="return onClick()">
 			<p class="head2">STUDENT LOGIN</p>
 			<input class="input" type="text" name="uname" id="uname" placeholder="Username"><br><br>
 			<input class="input" type="password" name="pass" id="pass" placeholder="Password"><br><br>
 			<button class="btn" type="submit" name="submit">LOGIN</button>
-		</form>
+		</form><br>
 		<p><a class="link" href="update_password.php">Forgot password?</a></p>
 	</div>
 

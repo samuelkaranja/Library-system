@@ -1,5 +1,6 @@
 <?php
 	include "connect.php";
+	include "navbar1.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="header">
+	<!-- <div class="header">
 		<div class="logo">
 			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
 		</div>
@@ -20,7 +21,7 @@
 				<button class="btn"><a href="signup.php">SIGN UP</a></button>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="edit">
 		<form method="post" action="" onsubmit="return onClick()">

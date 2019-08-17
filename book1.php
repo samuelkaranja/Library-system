@@ -1,5 +1,6 @@
 <?php
 	include "connect.php";
+	include "navbar1.php";
 
 	$sql = "SELECT * FROM books";
 
@@ -12,20 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="header">
-		<div class="logo">
-			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
-		</div>
-
-		<div class="nav">
-			<ul>
-				<li><a href="index.php">HOMEPAGE</a></li>
-				<li><a href="books.php">BOOKS</a></li>
-				<button class="btn"><a href="signup.php">SIGN UP</a></button>
-			</ul>
-		</div>
-	</div>
-
 	<div class="srch">
 		<form method="post" action="">
 			<input class="input" type="text" name="dept" placeholder="Search department......" required="">

@@ -1,5 +1,6 @@
 <?php
 	include "connect.php";
+	include "navbar1.php";
 
 	$sql = "SELECT * FROM student";
 
@@ -12,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="header">
+	<!-- <div class="header">
 		<div class="logo">
 			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
 		</div>
@@ -24,7 +25,7 @@
 				<button class="btn"><a href="signup.php">SIGN UP</a></button>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="srch">
 		<form method="post" action="">
@@ -63,9 +64,13 @@
 			$res = mysqli_query($conn, $sql) or die(mysqli_error($sql));
 
 			if (mysqli_num_rows($res) == 0) {
+
 				echo "Username not deleted";
+
 			}else{
+
 				echo "Username deleted";
+				
 			}
 		}
 	?>

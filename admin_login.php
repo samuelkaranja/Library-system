@@ -1,5 +1,7 @@
 <?php
 	include "connect.php";
+	include "navbar.php";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,19 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-	<div class="header">
-		<div class="logo">
-			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
-		</div>
-
-		<div class="nav">
-					<button class="btn"><a href="index.php">HOME</a></button>
-					<button class="btn"><a href="stud_login.php">STUDENT LOGIN</a></button>
-					<button class="btn"><a href="signup.php">SIGN UP</a></button>
-			</div>
-	</div>
-
 	<div class="frm">
 		<form method="post" action="" onsubmit="return onClick()">
 			<p class="head1">ADMIN LOGIN</p>
@@ -44,7 +33,10 @@
 				</div>
 	<?php
 			}else{
+
+			$_SESSION['login_admin'] = $_POST['uname'];
 	?>
+
 			<script>
 				window.location = 'view.php';
 			</script>
