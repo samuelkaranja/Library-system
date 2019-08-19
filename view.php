@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="box">
-		<p><a class="link" href="">ISSUE BOOKS</a></p>
+		<p><a class="link" href="issue_book.php">ISSUE BOOKS</a></p>
 	</div>
 
 </section>

@@ -148,7 +148,7 @@ footer{
 
 .head2{
 	color: orange;
-	padding:15px 0px 10px 0px;
+	padding:15px 0px 30px 0px;
 	text-align: center;
 	font-size: 20px;
 	font-size: bold;
@@ -258,4 +258,8 @@ td{
 	width: 500px;
 	text-align: center;
 	margin: 0px 0px 0px 680px;
+}
+
+.approve{
+	margin-left: 400px;
 }

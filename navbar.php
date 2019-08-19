@@ -23,7 +23,7 @@
 				<ul>
 					<li><a href="index.php">HOME</a></li>
 					<li><a href="books.php">BOOKS</a></li>
-					<li><a href="fine.php">FINE</a></li>
+					<li><a href="book_request.php">REQUEST</a></li>
 					<li><a href="profile.php">PROFILE</a></li>
 				</ul>
 			</div>

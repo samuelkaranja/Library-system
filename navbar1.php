@@ -24,7 +24,7 @@
 					<li><a href="index.php">HOME</a></li>
 					<li><a href="book1.php">BOOKS</a></li>
 					<li><a href="editbooks.php">EDIT</a></li>
-					<li><a href="book_request.php">REQUEST</a></li>
+					<li><a href="book_request1.php">REQUEST</a></li>
 					<li><a href="studentdetails.php">STUDENT DETAILS</a></li>
 				</ul>
 			</div>

@@ -7,7 +7,7 @@
 <head>
 	<title>Profile</title>
 </head>
-<body>
+<body style="background-color:;">
 	<h2 class="head4" style="text-align: center; font-weight: bold; padding-top: 40px; font-size: 40px;">My Profile</h2>
 	<!-- <div style="text-align: center;">
 		<img src="img/lg.jpg">
