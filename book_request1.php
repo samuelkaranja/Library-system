@@ -8,6 +8,14 @@
  	<title></title>
  </head>
  <body>
+ <div class="srch">
+ 	<form method="post" action="">
+ 		<input class="input" type="text" name="uname" placeholder="Username" required=""><br><br>
+ 		<input class="input" type="text" name="bname" placeholder="BookName" required=""><br><br>
+ 		<button class="btn" type="submit" name="submit">Enter</button>
+ 	</form>
+ </div>
+
  <?php 
  	if (isset($_SESSION['login_admin'])) {
  		
@@ -54,5 +62,18 @@
 
  	}
 ?>
+
+<?php 
+	if (isset($_POST['submit'])) {
+		
+		$_SESSION['stud_uname'] = $_POST['uname'];
+		$_SESSION['bk_name'] = $_POST['bname'];
+?>
+	<script>
+		window.location = "issue_book.php";
+	</script>
+<?php
+	}
+ ?>
  </body>
  </html>
