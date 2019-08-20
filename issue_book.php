@@ -22,8 +22,28 @@
  <?php
  	if (isset($_POST['submit'])) {
  		
- 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue Date` = '$_POST[issue]', `Return Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";  
+ 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue Date` = '$_POST[issue]', `Return Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
+
  		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+ 		$sql = "UPDATE books SET quantity = quantity - 1 WHERE bookname = '$_SESSION[bk_name]'"; 
+
+ 		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn)); 
+
+ 		$q = mysqli_query($conn, "SELECT quantity FROM books WHERE bookname = '$_SESSION[bk_name]'");
+
+ 		while ($row = mysqli_fetch_assoc($q)) {
+ 			
+ 			if ($row['Quantity'] === 0) {
+ 				
+ 				$sq = mysqli_query($conn, "UPDATE books SET status = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
+ 			}
+ 		}
+ ?>
+ 		<script>
+ 			alert('Updated successfully');
+ 		</script>
+ <?php
  	}
 
  ?>
