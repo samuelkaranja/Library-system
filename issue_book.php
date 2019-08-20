@@ -8,12 +8,6 @@
  	<title>Issue Books</title>
  	<link rel="stylesheet" type="text/css" href="style.css">
  </head>
- <style type="text/css">
- 	.approve{
- 		text-align: center;
- 		padding-top: 170px;
- 	}
- </style>
  <body>
  <div>
  	<form method="post" action="" class="approve">
@@ -28,7 +22,8 @@
  <?php
  	if (isset($_POST['submit'])) {
  		
- 		$sql = "UPDATE book_requested SET approve = '$_POST[approve]', issue = '$_POST[issue]', return = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";  
+ 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue Date` = '$_POST[issue]', `Return Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";  
+ 		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
  	}
 
  ?>

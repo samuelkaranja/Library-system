@@ -261,5 +261,7 @@ td{
 }
 
 .approve{
-	margin-left: 400px;
+	margin:0 auto;
+	text-align: center;
+ 	padding-top: 170px;
 }

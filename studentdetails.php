@@ -60,7 +60,7 @@
 						<td><?php echo $row['SecondName'] ?></td>
 						<td><?php echo $row['LastName'] ?></td>
 						<td><?php echo $row['Username'] ?></td>
-						<td><?php echo $row['Admission No'] ?></td>
+						<td><?php echo $row['Admission_No'] ?></td>
 						<td><?php echo $row['Department'] ?></td>
 						<td><?php echo $row['Year of Study'] ?></td>
 					</tr>
@@ -93,7 +93,7 @@
 					<td><?php echo $row['SecondName'] ?></td>
 					<td><?php echo $row['LastName'] ?></td>
 					<td><?php echo $row['Username'] ?></td>
-					<td><?php echo $row['Admission No'] ?></td>
+					<td><?php echo $row['Admission_No'] ?></td>
 					<td><?php echo $row['Department'] ?></td>
 					<td><?php echo $row['Year of Study'] ?></td>
 				</tr>

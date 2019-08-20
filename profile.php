@@ -19,7 +19,7 @@
 	</div>
 	<div class="tble">
 		<?php
-			$q = "SELECT `FirstName`, `SecondName`, `LastName`, `Username`, `Admission No`, `Department`, `Year of Study` FROM `student` WHERE Username = '$_SESSION[login_user]'";
+			$q = "SELECT `FirstName`, `SecondName`, `LastName`, `Username`, `Admission_No`, `Department`, `Year of Study` FROM `student` WHERE Username = '$_SESSION[login_user]'";
 
 			$res = mysqli_query($conn, $q) or die (mysqli_error($conn));
 
@@ -52,7 +52,7 @@
 
 			<tr>
 				<td>Admission No</td>
-				<td><?php echo $row['Admission No'] ?></td>
+				<td><?php echo $row['Admission_No'] ?></td>
 			</tr>
 
 			<tr>
