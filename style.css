@@ -10,53 +10,53 @@ html,body{
 
 /*..........Navbar.........*/
 .header{
-		background-color: gray;
-		width: 100%;
-		height: 110px;
-	}
+	background-color: gray;
+	width: 100%;
+	height: 110px;
+}
 
-	.logo{
-		float: left;
-		padding: 40px 10px 0px 20px;
-		font-family: cursive;
-	}
+.logo{
+	float: left;
+	padding: 40px 10px 0px 20px;
+	font-family: cursive;
+}
 
-	.logo a{
-		color: orange;
-		text-decoration: none;
-	}
+.logo a{
+	color: orange;
+	text-decoration: none;
+}
 
-	.navbar{
-		float: left;
-		padding: 48px 0px 0px 20px;
-	}
+.navbar{
+	float: left;
+	padding: 48px 0px 0px 20px;
+}
 
-	.navbar li{
-		display: inline;
-		padding-left: 35px;
-	}
+.navbar li{
+	display: inline;
+	padding-left: 35px;
+}
 
-	.navbar li a{
-		text-decoration: none;
-		color: white;
-	}
+.navbar li a{
+	text-decoration: none;
+	color: white;
+}
 
-	.nav_btn{
-		float: right;
-		padding: 38px 20px 0px 0px;
-	}
+.nav_btn{
+	float: right;
+	padding: 38px 20px 0px 0px;
+}
 
-	.btn{
-		background-color: orange;
-		border: none;
-		padding: 10px;
-		border-radius: 5px;
-	}
+.btn{
+	background-color: orange;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+}
 
-	.btn a{
-		text-decoration: none;
-		color: white;
-	}
+.btn a{
+	text-decoration: none;
+	color: white;
+}
 
 .name{
 	padding: 48px 100px 0px 130px;

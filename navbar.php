@@ -32,7 +32,7 @@
 					echo "Welcome " . strtoupper($_SESSION['login_user']);
 				?>
 			</div>
-			
+
 			<div class="nav_btn">
 				<button class="btn"><a href="signup.php">SIGNUP</a></button>
 				<button class="btn"><a href="logout.php">LOGOUT</a></button>
