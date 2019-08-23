@@ -8,12 +8,7 @@
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<style>
-	
-
-</style>
 <body>
-
 	<section class="sec_2">
 		<div class="intro">
 			<p class="p1">Library Management System</p>

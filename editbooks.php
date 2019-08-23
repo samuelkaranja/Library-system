@@ -9,19 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<!-- <div class="header">
-		<div class="logo">
-			<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
-		</div>
-
-		<div class="nav">
-			<ul>
-				<li><a href="index.php">HOMEPAGE</a></li>
-				<li><a href="books.php">BOOKS</a></li>
-				<button class="btn"><a href="signup.php">SIGN UP</a></button>
-			</ul>
-		</div>
-	</div> -->
 
 	<div class="edit">
 		<form method="post" action="" onsubmit="return onClick()">

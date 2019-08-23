@@ -33,7 +33,7 @@
 	<?php
 			}else{
 
-			$_SESSION['login_user'] = $_POST['uname'];
+			$_SESSION['login_user'] = $_POST['uname']; //Assinging the session variable to a value
 	?>
 			<script>
 				window.location = 'index.php';

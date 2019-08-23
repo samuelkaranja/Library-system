@@ -15,7 +15,6 @@
 	?>		
 		<div class="header">
 			<div class="logo">
-
 				<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
 			</div>
 
@@ -27,11 +26,13 @@
 					<li><a href="profile.php">PROFILE</a></li>
 				</ul>
 			</div>
+
 			<div class="name">
 				<?php
 					echo "Welcome " . strtoupper($_SESSION['login_user']);
 				?>
 			</div>
+			
 			<div class="nav_btn">
 				<button class="btn"><a href="signup.php">SIGNUP</a></button>
 				<button class="btn"><a href="logout.php">LOGOUT</a></button>
@@ -45,6 +46,7 @@
 			<div class="logo">
 				<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
 			</div>
+
 			<div class="navbar">
 				<ul>
 					<li><a href="index.php">HOME</a></li>
@@ -62,6 +64,5 @@
 		}
 	?> 
 </section>
-
 </body>
 </html>

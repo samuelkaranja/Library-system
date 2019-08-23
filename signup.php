@@ -44,7 +44,7 @@
 			}
 
 			if ($count == 0) {
-				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission No`, `Department`, `Year of Study`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$_POST[pass]', '$_POST[cpass]', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]')";
+				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission_No`, `Department`, `Year of Study`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$_POST[pass]', '$_POST[cpass]', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]')";
 
 				$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 

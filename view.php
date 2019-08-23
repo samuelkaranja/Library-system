@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="box">
-		<p><a class="link" href="">BOOKS BORROWED</a></p>
+		<p><a class="link" href="bk_borrowed.php">BOOKS BORROWED</a></p>
 	</div>
 
 	<div class="box">

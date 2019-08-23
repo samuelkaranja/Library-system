@@ -34,9 +34,9 @@
 
  		while ($row = mysqli_fetch_assoc($q)) {
  			
- 			if ($row['Quantity'] === 0) {
+ 			if ($row['Quantity'] == 0) {
  				
- 				$sq = mysqli_query($conn, "UPDATE books SET status = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
+ 				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
  			}
  		}
  ?>

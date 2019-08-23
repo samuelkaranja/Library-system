@@ -37,8 +37,8 @@
 					<td><?php echo $row['Username'] ?></td>
 					<td><?php echo $row['BookName'] ?></td>
 					<td><?php echo $row['Approve'] ?></td>
-					<td><?php echo $row['Issue Date'] ?></td>
-					<td><?php echo $row['Return Date'] ?></td>
+					<td><?php echo $row['Issue_Date'] ?></td>
+					<td><?php echo $row['Return_Date'] ?></td>
 				</tr>
 		<?php
 			};

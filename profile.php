@@ -9,14 +9,13 @@
 </head>
 <body style="background-color:;">
 	<h2 class="head4" style="text-align: center; font-weight: bold; padding-top: 40px; font-size: 40px;">My Profile</h2>
-	<!-- <div style="text-align: center;">
-		<img src="img/lg.jpg">
-	</div> -->
+	<center><img src="img/lg.jpg"  style="border-radius: 10px;"></center>
 	<div style="text-align: center;  margin: 10px 0px 20px 0px; font-size: 25px;">
-	<h4>
-		<?php echo "Welcome " . $_SESSION['login_user'];?>
-	</h4>
+		<h4>
+			<?php echo "Welcome " . $_SESSION['login_user'];?>
+		</h4>
 	</div>
+
 	<div class="tble">
 		<?php
 			$q = "SELECT `FirstName`, `SecondName`, `LastName`, `Username`, `Admission_No`, `Department`, `Year of Study` FROM `student` WHERE Username = '$_SESSION[login_user]'";
