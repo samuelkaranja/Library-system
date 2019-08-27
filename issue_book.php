@@ -22,7 +22,7 @@
  <?php
  	if (isset($_POST['submit'])) {
  		
- 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue Date` = '$_POST[issue]', `Return Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
+ 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue_Date` = '$_POST[issue]', `Return_Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
 
  		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
