@@ -15,6 +15,10 @@
 			<p class="hd">WELCOME</p>
 			<p class="p2">OPENS AT : 08:00am</p><br>
 			<p class="p2">CLOSES AT : 05:00PM</p>
+			<?php 
+				$d = date("d / m / Y");
+				echo "<b>".$d."</b>";
+			 ?>
 		</div>
 	</section>
 

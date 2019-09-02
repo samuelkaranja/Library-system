@@ -17,18 +17,6 @@
 			<div class="logo">
 				<h2><a href="index.php">SCHOOL LIBRARY MANAGEMENT SYSTEM</a></h2>
 			</div>
-			<script type="text/javascript"> 
-function display_c(){
-var refresh=1000; // Refresh rate in milli seconds
-mytime=setTimeout('display_ct()',refresh)
-}
-
-function display_ct() {
-var x = new Date()
-document.getElementById('ct').innerHTML = x;
-display_c();
- }
-</script>
 
 			<div class="navbar">
 				<ul>

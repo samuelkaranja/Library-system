@@ -15,7 +15,7 @@
 
 		if (isset($_SESSION['login_admin'])) {
 			
-			$sql = "SELECT student.Username, Admission_No, books.BookName, AuthorsName, Edition, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = 'Yes' ORDER BY `book_requested`.`Return_Date` ASC";
+			$sql = "SELECT student.Username, Admission_No, books.BookName, AuthorsName, Edition, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = 'Yes' ORDER BY book_requested.Return_Date ASC";
 
 			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
@@ -47,7 +47,7 @@
 
 					$var = '<p style="color:orangered;">EXPIRED</p>';
 
-					$sql = "UPDATE book_requested SET `Approve` = '$var' WHERE `Return_date` = $row[Return_Date] AND `Approve` = 'Yes' ORDER BY `book_requested`.`Return_Date` ASC";
+					$sql = "UPDATE book_requested SET Approve = '$var' WHERE Return_Date = '$row[Return_date]' AND Approve = 'Yes' ORDER BY book_requested.Return_Date ASC";
 
 					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 

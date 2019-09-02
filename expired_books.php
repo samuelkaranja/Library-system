@@ -11,7 +11,7 @@
 <?php
 if (isset($_SESSION['login_admin'])) {
 
-			$var = 'EXPIRED';
+			$var = '<p style="color:orangered;">EXPIRED</p>';
 
 			$sql = "SELECT student.Username, Admission_No, books.BookName, AuthorsName, Edition, Approve, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = '$var' ORDER BY `book_requested`.`Return_Date` ASC";
 
@@ -24,7 +24,7 @@ if (isset($_SESSION['login_admin'])) {
 	?>
 			<div>
 				<table class="tbl">
-					<h2 class="head2">INFORMATION OF BOOKS BORROWED</h2>
+					<h2 class="head2">INFORMATION OF EXPIRED BORROWED</h2>
 					<tr>
 						<th>Username</th>
 						<th>Admission No</th>
