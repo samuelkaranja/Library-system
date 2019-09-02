@@ -14,11 +14,8 @@
 			<p class="p1">Library Management System</p>
 			<p class="hd">WELCOME</p>
 			<p class="p2">OPENS AT : 08:00am</p><br>
-			<p class="p2">CLOSES AT : 05:00PM</p>
-			<?php 
-				$d = date("d / m / Y");
-				echo "<b>".$d."</b>";
-			 ?>
+			<p class="p2">CLOSES AT : 05:00PM</p> 
+			<div id="time" style="font-size: 30px; color: aqua;"></div>
 		</div>
 	</section>
 
@@ -26,5 +23,29 @@
 		<p>&copy;2019</p>
 		<p>All rights reserved</p>
 	</footer>
+
+<script>
+	function checkTime(i) {
+	  if (i < 10) {
+	    i = "0" + i;
+	  }
+	  return i;
+	}
+		
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		// add a zero in front of numbers<10
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+		t = setTimeout(function() {
+				    startTime()
+				  }, 500);
+		}
+		startTime();
+</script>
 </body>
 </html>
