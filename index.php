@@ -24,7 +24,7 @@
 		<p>All rights reserved</p>
 	</footer>
 
-<script>
+<!-- <script>
 	function checkTime(i) {
 	  if (i < 10) {
 	    i = "0" + i;
@@ -46,6 +46,6 @@
 				  }, 500);
 		}
 		startTime();
-</script>
+</script> -->
 </body>
 </html>

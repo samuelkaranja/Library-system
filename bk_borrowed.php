@@ -11,7 +11,7 @@
 <body>
 	<?php
 
-	$count = 0;
+	$c = 0;
 
 		if (isset($_SESSION['login_admin'])) {
 			
@@ -21,7 +21,7 @@
 
 			if (mysqli_num_rows($res) == 0) {
 				
-				echo "There is no request";
+				echo "<h1>"."There is no Book requested"."</h1>";
 			}else{
 	?>
 			<div>
@@ -43,14 +43,14 @@
 
 				if ($d > $row['Return_Date']) {
 
-					$count = $count + 1;
+					$c = $c + 1;
 
 					$var = '<p style="color:orangered;">EXPIRED</p>';
 
-					$sql = "UPDATE book_requested SET Approve = '$var' WHERE Return_Date = '$row[Return_date]' AND Approve = 'Yes' ORDER BY book_requested.Return_Date ASC";
+					$sql = "UPDATE `book_requested` SET `Approve` = '$var' WHERE `Return_Date` = '$row[Return_Date]' AND `Approve` = 'Yes' LIMIT $c";
 
 					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-
+					
 					echo $d. "<br>";
 				}
 
