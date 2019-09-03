@@ -15,10 +15,6 @@
 			<p class="hd">WELCOME</p>
 			<p class="p2">OPENS AT : 08:00am</p><br>
 			<p class="p2">CLOSES AT : 05:00PM</p> 
-			<?php 
-				$d = date("Y-m-d");
-				echo $d ."<br>" ."<br>";
-			 ?>
 			<div id="time" style="font-size: 30px; color: aqua;"></div>
 		</div>
 	</section>
