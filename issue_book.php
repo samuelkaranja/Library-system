@@ -32,9 +32,9 @@
 
  		$q = mysqli_query($conn, "SELECT quantity FROM books WHERE bookname = '$_SESSION[bk_name]'");
 
- 		while ($row = mysqli_fetch_assoc($q)) {
+ 		while ($row = mysqli_fetch_array($q)) {
  			
- 			if ($row['Quantity'] == 0) {
+ 			if ($row['Quantity'] === 0) {
  				
  				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
  			}
