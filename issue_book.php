@@ -26,11 +26,11 @@
 
  		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
- 		$sql = "UPDATE books SET quantity = quantity - 1 WHERE bookname = '$_SESSION[bk_name]'"; 
+ 		$sql = "UPDATE books SET quantity = quantity - 1 WHERE `BookName` = '$_SESSION[bk_name]'"; 
 
  		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn)); 
 
- 		$q = mysqli_query($conn, "SELECT quantity FROM books WHERE bookname = '$_SESSION[bk_name]'");
+ 		$q = mysqli_query($conn, "SELECT `Quantity` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
 
  		while ($row = mysqli_fetch_array($q)) {
  			
