@@ -201,6 +201,12 @@ footer{
 	/*margin: 0px 30px 0px 30px;*/
 }
 
+.tbl_1{
+	text-align: center;
+	width: 30%;
+	border-collapse: collapse;
+}
+
 th{
 	border: 1px solid black;
 	padding: 15px;
