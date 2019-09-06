@@ -8,6 +8,29 @@
 	<title>Books expired</title>
 </head>
 <body>
+
+<div class="srch">
+	<form method="post" action="">
+		<input class="input" type="" name="uname" placeholder="Username"><br><br>
+		<input class="input" type="" name="bname" placeholder="Book Name"><br><br>
+		<button class="btn" type="submit" name="submit">Submit</button>
+	</form>
+</div>
+
+<?php 
+	if (isset($_SESSION['login_admin'])) {
+		
+		if (isset($_POST['submit'])){
+			
+			$var1 = '<p style="color:green; font-weight:bold;">RETURNED</p>';
+
+			$sql = "UPDATE `book_requested` SET `Approve` = '$var1' WHERE `Username` = '$_POST[uname]' AND `BookName` = '$_POST[bname]'";
+
+			$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+		}
+	}
+ ?>
+
 <?php
 if (isset($_SESSION['login_admin'])) {
 

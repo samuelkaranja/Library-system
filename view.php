@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="box">
-		<p><a class="link" href="">BOOK RETURNED</a></p>
+		<p><a class="link" href="book_returned.php">BOOK RETURNED</a></p>
 	</div>
 
 	<div class="box">
