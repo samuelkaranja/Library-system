@@ -42,7 +42,7 @@
 					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 		?>
 					<script>
-						alert('Request sent');
+						alert('Book request sent for approval.');
 					</script>
 		<?php
 				}else{

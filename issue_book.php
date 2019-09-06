@@ -41,7 +41,7 @@
  		}
  ?>
  		<script>
- 			alert('Updated successfully');
+ 			alert('Book request approved');
  		</script>
  <?php
  	}

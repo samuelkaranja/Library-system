@@ -95,7 +95,7 @@
 					<td><?php echo $row['Username'] ?></td>
 					<td><?php echo $row['Admission_No'] ?></td>
 					<td><?php echo $row['Department'] ?></td>
-					<td><?php echo $row['Year of Study'] ?></td>
+					<td><?php echo $row['Year_of_Study'] ?></td>
 				</tr>
 		<?php
 			};
