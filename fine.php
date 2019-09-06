@@ -8,51 +8,6 @@
 	<title>Fines</title>
 </head>
 <body>
-<!-- <?php
-	if (isset($_SESSION['login_user'])) {
-		
-		$var3 = '<p style="color:orangered; font-weight:bold;">EXPIRED</p>';
-
-		$sql = "SELECT books.BookName, AuthorsName, Edition,book_requested.Username,book_requested.Approve, book_requested.Issue_Date, book_requested.Return_Date FROM book_requested inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = '$var3' AND book_requested.Username = '$_SESSION[login_user]' ORDER BY book_requested.Return_Date ASC";
-
-		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-
-		if (mysqli_num_rows($res) == 0) {
-			
-			echo "<h1" . "There are no expired books" . "</h1>";
-		}else{
-?>
-		<div>
-			<table class="tbl">
-				<h2 class="head2">EXPIRED BOOKS</h2>
-					<tr>
-						<th>Username</th>
-						<th>BookName</th>
-						<th>AuthorsName</th>
-						<th>Edition</th>
-						<th>Status</th>
-						<th>Issue Date</th>
-						<th>Return Date</th>
-					</tr>
-<?php
-		while ($row = mysqli_fetch_array($res)) {
-?>
-		<tr>
-			<td><?php echo $row['Username'] ?></td>
-			<td><?php echo $row['BookName'] ?></td>
-			<td><?php echo $row['AuthorsName'] ?></td>
-			<td><?php echo $row['Edition'] ?></td>
-			<td><?php echo $row['Approve'] ?></td>
-			<td><?php echo $row['Issue_Date'] ?></td>
-			<td><?php echo $row['Return_Date'] ?></td>
-		</tr>
-<?php
-			}
-
-		}
-
-	}
-?> -->
 <?php
 	if (isset($_SESSION['login_user'])) {
 		
@@ -72,23 +27,6 @@
 				$_SESSION['day'] = $day;
 			}
 		}
-
-		// while ($row = mysqli_fetch_array($res)) {
-			
-		// 	$d = strtotime($row['Return_Date']);
-		// 	$c = strtotime(date("Y/m/d"));
-
-		// 	$diff = $c - $d;
-			
-		// 	if ($diff >= 0) {
-
-		// 		$day = 50;
-				
-		// 		// $day = floor($diff/(60*60*24));
-
-		// 		$_SESSION['day'] = $day;
-		// 	}
-		// }
 	}
 ?>
 
