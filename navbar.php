@@ -20,10 +20,10 @@
 
 			<div class="navbar">
 				<ul>
-					<li><a href="index.php">HOME</a></li>
 					<li><a href="books.php">BOOKS</a></li>
 					<li><a href="book_request.php">REQUEST</a></li>
 					<li><a href="profile.php">PROFILE</a></li>
+					<li><a href="fine.php">FINE</a></li>
 				</ul>
 			</div>
 

@@ -15,41 +15,50 @@
 
 	$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
  
+ 	if (mysqli_num_rows($result) == 0) {
+ 		
+ 		echo "<h1>" . "No books returned" . "</h1>";
+ 	}else{
+?>
+	<div>
+	 	<table class="tbl">
+	 		<h2 class="head2">BOOKS RETURNED</h2>
+				<tr>
+					<th>Username</th>
+					<th>Admission No</th>
+					<th>BookName</th>
+					<th>AuthorsName</th>
+					<th>Edition</th>
+					<th>Status</th>
+					<th>Issue Date</th>
+					<th>Return Date</th>
+				</tr>
+
+			<?php
+				while ($row = mysqli_fetch_array($result)) {
+			?>
+				<tr>
+					<td><?php echo $row['Username'] ?></td>
+					<td><?php echo $row['Admission_No'] ?></td>
+					<td><?php echo $row['BookName'] ?></td>
+					<td><?php echo $row['AuthorsName'] ?></td>
+					<td><?php echo $row['Edition'] ?></td>
+					<td><?php echo $row['Approve'] ?></td>
+					<td><?php echo $row['Issue_Date'] ?></td>
+					<td><?php echo $row['Return_Date'] ?></td>
+				</tr>
+
+			<?php
+				}
+			?>
+
+	 	</table>
+ 	</div>
+ <?php
+ 	}
  ?>
 
- <div>
- 	<table class="tbl">
- 		<h2 class="head2">BOOKS RETURNED</h2>
-			<tr>
-				<th>Username</th>
-				<th>Admission No</th>
-				<th>BookName</th>
-				<th>AuthorsName</th>
-				<th>Edition</th>
-				<th>Status</th>
-				<th>Issue Date</th>
-				<th>Return Date</th>
-			</tr>
 
-		<?php
-			while ($row = mysqli_fetch_array($result)) {
-		?>
-			<tr>
-				<td><?php echo $row['Username'] ?></td>
-				<td><?php echo $row['Admission_No'] ?></td>
-				<td><?php echo $row['BookName'] ?></td>
-				<td><?php echo $row['AuthorsName'] ?></td>
-				<td><?php echo $row['Edition'] ?></td>
-				<td><?php echo $row['Approve'] ?></td>
-				<td><?php echo $row['Issue_Date'] ?></td>
-				<td><?php echo $row['Return_Date'] ?></td>
-			</tr>
-
-		<?php
-			}
-		?>
-
- 	</table>
- </div>
+ <!--  -->
  </body>
  </html>

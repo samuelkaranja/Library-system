@@ -21,7 +21,7 @@
 
 			if (mysqli_num_rows($res) == 0) {
 				
-				echo "<h1>"."There is no Book requested"."</h1>";
+				echo "<h1>"."There are no book requested"."</h1>";
 			}else{
 	?>
 			<div>
