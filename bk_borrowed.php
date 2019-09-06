@@ -39,23 +39,20 @@
 			<?php
 				while($row = mysqli_fetch_array($res)){
 
-				$d = date("Y-m-d");
+				$d = date("Y/m/d");
 
 				if ($d > $row['Return_Date']) {
-
+					
 					$c = $c + 1;
 
 					$var = '<p style="color:orangered;">EXPIRED</p>';
 
-					$sql = "UPDATE `book_requested` SET `Approve` = '$var' WHERE `Return_Date` = '$row[Return_Date]' AND `Approve` = 'Yes' LIMIT $c";
+					mysqli_query($conn, "UPDATE book_requested SET `Approve` = '$var' WHERE `Return_Date` = '$row[Return_Date]' AND `Approve` = 'Yes' LIMIT $c");
 
-					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-					
-					echo $d. "<br>";
+					echo $d . "<br>";
 				}
 
-				
-			?>
+				?>
 					<tr>
 						<td><?php echo $row['Username'] ?></td>
 						<td><?php echo $row['Admission_No'] ?></td>

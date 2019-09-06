@@ -24,7 +24,7 @@ if (isset($_SESSION['login_admin'])) {
 	?>
 			<div>
 				<table class="tbl">
-					<h2 class="head2">INFORMATION OF EXPIRED BORROWED</h2>
+					<h2 class="head2">BOOKS EXPIRED</h2>
 					<tr>
 						<th>Username</th>
 						<th>Admission No</th>
