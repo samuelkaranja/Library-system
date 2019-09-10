@@ -9,6 +9,41 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="srch">
+	<form method="post" action="">
+		<input class="input" type="" name="uname" placeholder="Username"><br><br>
+		<input class="input" type="" name="bname" placeholder="Book Name"><br><br>
+		<button class="btn" type="submit" name="submit">Submit</button>
+	</form>
+</div>
+
+<?php 
+	if (isset($_SESSION['login_admin'])) {
+		
+		if (isset($_POST['submit'])){
+			
+			$var1 = '<p style="color:green; font-weight:bold;">RETURNED</p>';
+
+			$sql = "UPDATE `book_requested` SET `Approve` = '$var1' WHERE `Username` = '$_POST[uname]' AND `BookName` = '$_POST[bname]'";
+
+			$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+			mysqli_query($conn, "UPDATE books SET quantity = quantity + 1 WHERE `BookName` = '$_POST[bname]'");
+
+			$q = mysqli_query($conn, "SELECT `Quantity` FROM books WHERE `BookName` = '$_POST[bname]'");
+
+	 		while ($row = mysqli_fetch_array($q)) {
+	 			
+	 			if ($row['Quantity'] != 0) {
+	 				
+	 				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Available' WHERE `Bookname` = '$_POST[bname]'");
+	 			}
+	 		}
+		}
+	}
+ ?>
+
+
 	<?php
 
 	$c = 0;
@@ -49,7 +84,9 @@
 
 					mysqli_query($conn, "UPDATE book_requested SET `Approve` = '$var' WHERE `Return_Date` = '$row[Return_Date]' AND `Approve` = 'Yes' LIMIT $c");
 
-					echo $d . "<br>";
+					// echo $d . "<br>";
+
+					echo "Book return date expired";
 				}
 
 				?>

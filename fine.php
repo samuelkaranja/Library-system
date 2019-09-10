@@ -25,6 +25,7 @@
 				$day = 50;
 
 				$_SESSION['day'] = $day;
+
 			}
 		}
 	}

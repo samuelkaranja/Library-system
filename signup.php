@@ -54,7 +54,7 @@
 
 				}else{
 
-					echo "Sign up successful";
+					echo "you have Signed up successfully";
 
 				}
 			}else{

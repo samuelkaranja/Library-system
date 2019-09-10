@@ -33,9 +33,9 @@
 			
 			$sql = "SELECT * FROM `student` WHERE Username LIKE '$_POST[uname]'";
 
-			$res = mysqli_query($conn, $sql) or die();
+			$result = mysqli_query($conn, $sql) or die();
 
-			if (mysqli_num_rows($res) == 0) {
+			if (mysqli_num_rows($result) == 0) {
 				
 				echo "Sorry! Username not found. Try again";
 			}else{
@@ -53,7 +53,7 @@
 						<th>Year Of Study</th>
 					</tr>
 			<?php
-				while($row = mysqli_fetch_array($res)){
+				while($row = mysqli_fetch_array($result)){
 			?>
 					<tr>
 						<td><?php echo $row['FirstName'] ?></td>
@@ -62,7 +62,7 @@
 						<td><?php echo $row['Username'] ?></td>
 						<td><?php echo $row['Admission_No'] ?></td>
 						<td><?php echo $row['Department'] ?></td>
-						<td><?php echo $row['Year of Study'] ?></td>
+						<td><?php echo $row['Year_of_Study'] ?></td>
 					</tr>
 			<?php
 				};
@@ -109,9 +109,9 @@
 	<?php
 		if (isset($_POST['delete'])) {
 			
-			$sql = "DELETE FROM `student` WHERE Username LIKE '%$_POST[delt]'";
+			$sql = "DELETE FROM `student` WHERE `Username` LIKE '%$_POST[delt]'";
 
-			$res = mysqli_query($conn, $sql);
+			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 			if (mysqli_num_rows($res) == 0) {
 

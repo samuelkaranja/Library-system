@@ -67,7 +67,7 @@
 
 				if (mysqli_num_rows($res) == 0) {
 					
-					echo "Sorry! Not found. Try again";
+					echo "<h1>"."Sorry! Not found. Try again"."</h1>";
 					
 				}else{
 		?>
