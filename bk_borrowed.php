@@ -86,7 +86,7 @@
 
 					// echo $d . "<br>";
 
-					echo "Book return date expired";
+					echo "<h3>"."Book return date expired"."</h3>";
 				}
 
 				?>

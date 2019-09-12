@@ -54,7 +54,7 @@
 
 				}else{
 
-					echo "you have Signed up successfully";
+					echo "<center>"."<h4>"."You have Signed up successfully"."</h4>"."</center>";
 
 				}
 			}else{
