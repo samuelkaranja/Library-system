@@ -17,11 +17,11 @@
 		$row = mysqli_fetch_array($result);
 	?>
 
-		<center><h1 style="padding-top: 30px; padding-bottom: 20px;">My Profile</h1></center>
+		<center><h1 style="padding-top: 30px; padding-bottom: 20px; font-family: arial; font-size: 35px;">MY PROFILE</h1></center>
 		<center><img src="img/p.png" style="border-radius: 50%; width: 150px; height: 150px;"></center><br>
 		<center>
 		<?php
-			echo "Welcome"."&nbsp;" . strtoupper($_SESSION['login_user']);
+			echo "<h3>"."Welcome"."</h3>" . strtoupper($_SESSION['login_user']);
 		?>
 		<br><br>
 		</center>

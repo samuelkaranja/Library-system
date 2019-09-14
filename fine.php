@@ -13,7 +13,7 @@
 		
 		$exp = '<p style="color:orangered;">EXPIRED</p>';
 
-		$res = mysqli_query($conn, "SELECT * FROM `book_requested` WHERE `Username` = '$_SESSION[login_user]' AND `Approve` = '$exp'");
+		$res = mysqli_query($conn, "SELECT * FROM `book_requested` WHERE `Username` = '$_SESSION[login_user]' AND `Approve` = '$exp'") or die(mysqli_error($conn));
 
 		while ($row = mysqli_fetch_array($res)){
 
@@ -36,7 +36,7 @@ if (isset($_SESSION['login_user'])) {
 
 			$var = '<p style="color:orangered;">EXPIRED</p>';
 
-			$sql = "SELECT student.Username, books.BookName, AuthorsName, Edition, Approve, book_requested.Username, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = '$var' ORDER BY `book_requested`.`Return_Date` ASC";
+			$sql = "SELECT student.Username, books.BookName, AuthorsName, Edition, Approve, book_requested.Username, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = '$var' AND book_requested.Username = '$_SESSION[login_user]'  ORDER BY `book_requested`.`Return_Date` ASC";
 
 			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
