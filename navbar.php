@@ -49,13 +49,14 @@
 
 			<div class="navbar">
 				<ul>
-					<li><a href="index.php">HOME</a></li>
-					<li><a href="books.php">BOOKS</a></li>
-					<li><a href="admin_login.php">ADMIN</a></li>
+					<!-- <li><a href="index.php">HOME</a></li>
+					<li><a href="books.php">BOOKS</a></li> -->
+					<!-- <li><a href="admin_login.php">ADMIN</a></li> -->
 				</ul>
 			</div>
 			
 			<div class="nav_btn">
+				<button class="btn"><a href="admin_login.php">ADMIN</a></button>
 				<button class="btn"><a href="stud_login.php">STUDENT LOGIN</a></button>
 				<button class="btn"><a href="signup.php">SIGNUP</a></button>
 			</div>

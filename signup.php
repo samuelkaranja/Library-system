@@ -19,6 +19,7 @@
 			<input class="input" type="password" name="pass" id="pass" placeholder="Password" autocomplete="off"><br><br>
 			<input class="input" type="password" name="cpass" id="cpass" placeholder="Confirm Password" autocomplete="off"><br><br>
 			<input class="input" type="" name="admnno" id="admnno" placeholder="Admission Number" autocomplete="off"><br><br>
+			<!-- class="textfield" value="" id="extra7" name="extra7" -->
 			<input class="input" type="text" name="dept" id="dept" placeholder="Department" autocomplete="off"><br><br>
 			<input class="input" type="" name="year" id="year" placeholder="Year Of Study"><br><br>
 			<button class="btn" type="submit" name="submit">Enter</button>

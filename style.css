@@ -269,5 +269,8 @@ td{
 .approve{
 	margin:0 auto;
 	text-align: center;
- 	padding-top: 170px;
+ 	background-color: purple;
+ 	margin: 150px 500px 0px 500px;
+ 	padding: 30px;
+ 	border-radius: 10px;
 }

@@ -17,7 +17,7 @@
 
 			if (mysqli_num_rows($result) == 0) {
 				
-				echo "<h1>"."There is no request"."</h1>";
+				echo "<h1>"."There is no request made"."</h1>";
 			}else{
 	?>
 		<div>

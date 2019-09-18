@@ -12,9 +12,9 @@
  <div>
  	<form method="post" action="" class="approve">
  		<h2 style="padding: 0px 0px 20px 0px; color: orange; font-size: 30px;">Approve</h2>
- 		<input class="input" type="text" name="approve" placeholder="Yes or No" required=""><br><br>
- 		<input class="input" type="text" name="issue" placeholder="Issue date yy/mm/dd" required=""><br><br>
- 		<input class="input" type="text" name="return" placeholder="Return date yy/mm/dd" required=""><br><br>
+ 		<input class="input" type="text" name="approve" id="approve" placeholder="Yes or No" required=""><br><br>
+ 		<input class="input" type="text" name="issue" id="issue" placeholder="Issue date yy/mm/dd" required=""><br><br>
+ 		<input class="input" type="text" name="return" id="return" placeholder="Return date yy/mm/dd" required=""><br><br>
  		<button class="btn" type="submit" name="submit">Approve</button>
  	</form>
  </div>
@@ -47,5 +47,33 @@
  	}
 
  ?>
+
+ <!-- <script>
+ 	function onClick(){
+ 		var approve = document.getElementById('approve');
+ 		var issue = document.getElementById('issue');
+ 		var return = document.getElementById('return');
+
+ 		if (approve.value.trim() = '' , issue.value.trim() = '' , return.value.trim() = '' ) {
+ 			alert('Fill in the blank spaces below');
+ 			return false;
+ 		}
+
+ 		if (approve.value.trim() = '') {
+ 			alert('Approve book request');
+ 			return false;
+ 		}
+
+ 		if (issue.value.trim() = '') {
+ 			alert('Enter issue date');
+ 			return false;
+ 		}
+
+ 		if (return.value.trim() = '') {
+ 			alert('Enter return date');
+ 			return false;
+ 		}
+ 	}
+ </script> -->
  </body>
  </html>

@@ -12,7 +12,7 @@
 	<div class="frm1">
 		<form method="post" action="" onsubmit="return onClick()">
 			<p class="head2">STUDENT LOGIN</p>
-			<input class="input" type="text" name="uname" id="uname" placeholder="Username"><br><br>
+			<input class="input" type="text" name="uname" id="uname" placeholder="Username" autocomplete="off"><br><br>
 			<input class="input" type="password" name="pass" id="pass" placeholder="Password"><br><br>
 			<button class="btn" type="submit" name="submit">LOGIN</button>
 		</form><br>
