@@ -23,8 +23,16 @@
 				<ul>
 					<li><a href="view.php">HOME</a></li>
 					<li><a href="book1.php">BOOKS</a></li>
-					<li><a href="editbooks.php">EDIT</a></li>
-					<li><a href="book_request1.php">REQUEST</a></li>
+					<li><a href="book_request1.php">REQUESTS</a></li>
+					<!-- <li><a href="">REPORTS</a></li> -->
+					<div class="dropdown">
+					  <li class="dropbtn">REPORT</li>
+						  <div class="dropdown-content">
+							  <a href="#">STUDENT DETAILS</a>
+							  <a href="#">BOOKS RETURNED</a>
+							  <a href="#">BOOKS EXPIRED</a>
+						  </div>
+					</div>
 				</ul>
 			</div>
 			<div class="name">

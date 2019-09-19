@@ -73,7 +73,7 @@
 			}
 		}else{
 	?>
-		<div>
+		<div id="result">
 			<table class="tbl">
 				<h2 class="head2">STUDENT DETAILS</h2>
 				<tr>
@@ -124,8 +124,19 @@
 			}
 		}
 	?>
-	<div class="back">
+	<!-- <div class="back">
 		<button class="bck_btn"><a href="view.php">Back</a></button>
-	</div>
+	</div> -->
+	<!-- <button class="btn3" onclick="printContent('result')">Print</button> --> 
+
+<script>
+	function printContent(el){
+		var restorepage = document.body.innerHTML;
+		var printcontent = document.getElementById(el).innerHTML;
+		document.body.innerHTML = printcontent;
+		window.print();
+		document.body.innerHTML = restorepage;
+	}
+</script>
 </body>
 </html>
