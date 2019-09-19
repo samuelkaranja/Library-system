@@ -274,3 +274,13 @@ td{
  	padding: 30px;
  	border-radius: 10px;
 }
+
+/*......Print button.......*/
+.btn3{
+	background-color: blue;
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-left: 30px;
+}

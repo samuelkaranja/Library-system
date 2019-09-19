@@ -16,7 +16,7 @@
 	<?php
 		$row = mysqli_fetch_array($result);
 	?>
-	
+		<div id="result">
 		<center><h1 style="padding-top: 30px; padding-bottom: 20px; font-family: arial; font-size: 35px;">MY PROFILE</h1></center>
 		<center><img src="img/p.png" style="border-radius: 50%; width: 150px; height: 150px;"></center><br>
 		<center>
@@ -65,5 +65,17 @@
 		</tr>
 	</table>
 </center>
+</div>
+<button class="btn3" onclick="printContent('result')">Print</button>
+
+<script>
+	function printContent(el){
+		var restorepage = document.body.innerHTML;
+		var printcontent = document.getElementById(el).innerHTML;
+		document.body.innerHTML = printcontent;
+		window.print();
+		document.body.innerHTML = restorepage;
+	}
+</script>
 </body>
 </html>
