@@ -22,7 +22,7 @@
 
 	<div class="dlt">
 		<form method="post" action="">
-			<input class="input" type="text" name="delt" placeholder="Book name....." required="">
+			<input class="input" type="text" name="delt" placeholder="Book name....." required="" autocomplete="off">
 			<button type="submit" class="btn1" name="delete">delete</button>
 		</form>
 	</div>

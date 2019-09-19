@@ -12,7 +12,13 @@
  <div>
  	<form method="post" action="" class="approve">
  		<h2 style="padding: 0px 0px 20px 0px; color: orange; font-size: 30px;">Approve</h2>
- 		<input class="input" type="text" name="approve" id="approve" placeholder="Yes or No" required=""><br><br>
+ 		<!-- <input class="input" type="text" name="approve" id="approve" placeholder="Yes or No" required=""><br><br> -->
+ 		<input type="text" class="input" name="approve" list="approval" autocomplete="off" placeholder="Yes or No">
+ 		<datalist id="approval">
+ 			<option value="Yes">
+ 			<option value="No">
+ 		</datalist>
+ 		<br><br>
  		<input class="input" type="text" name="issue" id="issue" placeholder="Issue date yy/mm/dd" required=""><br><br>
  		<input class="input" type="text" name="return" id="return" placeholder="Return date yy/mm/dd" required=""><br><br>
  		<button class="btn" type="submit" name="submit">Approve</button>
