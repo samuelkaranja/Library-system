@@ -20,7 +20,18 @@
 			<input class="input" type="password" name="cpass" id="cpass" placeholder="Confirm Password" autocomplete="off"><br><br>
 			<input class="input" type="" name="admnno" id="admnno" placeholder="Admission Number" autocomplete="off"><br><br>
 			<!-- class="textfield" value="" id="extra7" name="extra7" -->
-			<input class="input" type="text" name="dept" id="dept" placeholder="Department" autocomplete="off"><br><br>
+			<input class="input" type = "text" list = "departments" placeholder="Department" name="dept" id="dept" autocomplete="off"> 
+		      <datalist id = "departments">
+		        <option value = "ICT">
+		        <option value = "Electrical and Electronic Engineering">
+		        <option value = "Mechanical and Chemical Engineering">
+		        <option value = "Automotive Engineering">
+		        <option value = "Food and Bevarages">
+		        <option value = "Health and Applied sciences">
+		        <option value = "Food and Bevarages">
+		        <option value = "Business studies">
+		      </datalist>
+			<br><br>
 			<input class="input" type="" name="year" id="year" placeholder="Year Of Study"><br><br>
 			<button class="btn" type="submit" name="submit">Enter</button>
 		</form>
