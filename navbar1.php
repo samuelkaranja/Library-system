@@ -28,7 +28,7 @@
 					<div class="dropdown">
 					  <li class="dropbtn">REPORT</li>
 						  <div class="dropdown-content">
-							  <a href="#">STUDENT DETAILS</a>
+							  <a href="Studdetails.php">STUDENT DETAILS</a>
 							  <a href="#">BOOKS RETURNED</a>
 							  <a href="#">BOOKS EXPIRED</a>
 						  </div>
