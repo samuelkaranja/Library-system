@@ -21,6 +21,7 @@ if (isset($_SESSION['login_admin'])) {
 			if (mysqli_num_rows($res) == 0) {
 				
 				echo "<h1>There are no expired books</h1>";
+				
 			}else{
 	?>
 			<div id="result">

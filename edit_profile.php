@@ -19,12 +19,13 @@
 		<input class="input" type="text" name="admno" placeholder="Admission No" autocomplete="off"><br><br>
 		<input class="input" type="text" name="dept" placeholder="Department" autocomplete="off"><br><br>
 		<input class="input" type="text" name="Year" placeholder="Year of Study" autocomplete="off"><br><br>
+		<button class="btn" type="submit" name="submit">Update</button>
 	</form>
-	<button class="btn" name="submit">Update</button>
+	
 </div>
 
 <?php
-	// if (isset($_SESSION['login_user'])) {
+	 if (isset($_SESSION['login_user'])) {
 		
 		if (isset($_POST['submit'])) {
 		
@@ -44,7 +45,7 @@
 
 		}
 
-	// }
+	 }
 ?>
 <footer>
 		<p>&copy;2019</p>
