@@ -24,13 +24,12 @@
 					<li><a href="view.php">HOME</a></li>
 					<li><a href="book1.php">BOOKS</a></li>
 					<li><a href="book_request1.php">REQUESTS</a></li>
-					<!-- <li><a href="">REPORTS</a></li> -->
 					<div class="dropdown">
 					  <li class="dropbtn">REPORT</li>
 						  <div class="dropdown-content">
 							  <a href="Studdetails.php">STUDENT DETAILS</a>
-							  <a href="#">BOOKS RETURNED</a>
-							  <a href="#">BOOKS EXPIRED</a>
+							  <a href="bkreturned.php">BOOKS RETURNED</a>
+							  <a href="bkexpired.php">BOOKS EXPIRED</a>
 						  </div>
 					</div>
 				</ul>
@@ -41,7 +40,7 @@
 				?>
 			</div>
 			<div class="nav_btn">
-				<button class="btn"><a href="logout1.php">LOGOUT</a></button>
+				<button class="btn"><a href="logout1.php">LOG OUT</a></button>
 			</div>
 		</div>
 	<?php
@@ -62,7 +61,7 @@
 			
 			<div class="nav_btn">
 				<button class="btn"><a href="stud_login.php">STUDENT LOGIN</a></button>
-				<button class="btn"><a href="signup.php">SIGNUP</a></button>
+				<button class="btn"><a href="signup.php">SIGN UP</a></button>
 			</div>
 		</div>
 	<?php

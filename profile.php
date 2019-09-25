@@ -9,6 +9,7 @@
 </head>
 <body>
 	<button class="btn3" onclick="printContent('result')">Print</button><br><br>
+	<button class="btn4"><a href="edit_profile.php">Edit</a></button><br><br>
 	<?php
 		$sql = "SELECT `FirstName`, `SecondName`, `LastName`, `Username`, `Admission_No`, `Department`, `Year_of_Study` FROM `student` WHERE Username = '$_SESSION[login_user]'";
 		$result = mysqli_query($conn, $sql);
@@ -68,7 +69,7 @@
 		</table>
 	</center>
 </div>
-<!-- <button class="btn3" onclick="printContent('result')">Print</button> --> 
+
 
 <script>
 	function printContent(el){

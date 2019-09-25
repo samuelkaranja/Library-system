@@ -35,7 +35,7 @@
 
 			<div class="nav_btn">
 				<!-- <button class="btn"><a href="signup.php">SIGNUP</a></button> -->
-				<button class="btn"><a href="logout.php">LOGOUT</a></button>
+				<button class="btn"><a href="logout.php">LOG OUT</a></button>
 			</div>
 		</div>
 	<?php
@@ -58,7 +58,7 @@
 			<div class="nav_btn">
 				<button class="btn"><a href="admin_login.php">ADMIN</a></button>
 				<button class="btn"><a href="stud_login.php">STUDENT LOGIN</a></button>
-				<button class="btn"><a href="signup.php">SIGNUP</a></button>
+				<button class="btn"><a href="signup.php">SIGN UP</a></button>
 			</div>
 		</div>
 	<?php

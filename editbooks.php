@@ -33,7 +33,7 @@
 			if (!$res) {
 				echo "Book not inserted";
 			}else{
-				echo "Book inserted";
+				echo "<center>"."<h4>"."Book inserted"."</h4>"."</center>";
 			}
 		}
 	?>

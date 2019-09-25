@@ -42,13 +42,13 @@
 
 			$count = 0;
 
-			$sql = "SELECT `Username` FROM `student`";
+			$sql = "SELECT `Admission_No` FROM `student`";
 			$res = mysqli_query($conn, $sql);
 
 			// fetch associative(assoc) array
 			while ($row = mysqli_fetch_assoc($res)) { 
 
-				if ($row['Username'] == $_POST['uname']) {
+				if ($row['Admission_No'] == $_POST['admnno']) {
 
 					$count = $count + 1;
 
@@ -72,7 +72,7 @@
 			}else{
 	?>
 			<script>
-				alert('Username already taken');
+				alert('Admission Number already exists');
 			</script>
 	<?php
 			}

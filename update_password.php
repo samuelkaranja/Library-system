@@ -11,8 +11,9 @@
 <body>
 	<div class="frm1">
 		<form method="post" action="" onsubmit="return onClick()">
-			<p class="head2">Update Password</p>
-			<input class="input" type="text" name="uname" id="uname" placeholder="Username"><br><br>
+			<p class="head2">Change Password</p>
+			<input class="input" type="text" name="uname" id="uname" placeholder="Username" autocomplete="off"><br><br>
+			<input class="input" type="text" name="admno" id="admno" placeholder="Admission No" autocomplete="off"><br><br>
 			<input class="input" type="password" name="pass" id="pass" placeholder="New Password"><br><br>
 			<input class="input" type="password" name="cpass" id="cpass" placeholder="Confirm New Password"><br><br>
 			<button class="btn" type="submit" name="submit">UPDATE</button>
@@ -22,7 +23,7 @@
 	<?php
 		if (isset($_POST['submit'])) {
 
-			$sql = "UPDATE  `student` SET  `Password` =  '$_POST[pass]', `Confirm Password` =  '$_POST[cpass]' WHERE  `username` =  '$_POST[uname]'";
+			$sql = "UPDATE  `student` SET `Admission_No` =  '$_POST[admno]', `Password` =  '$_POST[pass]', `Confirm Password` =  '$_POST[cpass]' WHERE  `username` =  '$_POST[uname]'";
 
 			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
@@ -50,16 +51,22 @@
 	<script>
 		function onClick(){
 			var uname = document.getElementById('uname');
+			var admission = document.getElementById('admno');
 			var pass = document.getElementById('pass');
 			var cpass = document.getElementById('cpass');
 
-			if (uname.value.trim() == '' && pass.value.trim() == '' && cpass.value.trim() == 0) {
+			if (uname.value.trim() == '' && admission.value.trim() == '' && pass.value.trim() == '' && cpass.value.trim() == 0) {
 					alert('Fill in the blanks below');
 					return false;
 			}
 
 			if (uname.value.trim() == '') {
 				alert('Enter username');
+				return false;
+			}
+
+			if (admission.value.trim() == '') {
+				alert('Enter admission number');
 				return false;
 			}
 
