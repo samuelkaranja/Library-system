@@ -128,8 +128,8 @@
 		}
 	?>
 
-	<div class="back">
+	<!-- <div class="back">
 		<button class="bck_btn"><a href="view.php">Back</a></button>
-	</div>
+	</div> -->
 </body>
 </html>

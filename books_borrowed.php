@@ -1,0 +1,62 @@
+<?php
+	include "navbar1.php";
+	include "connect.php";
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button class="btn3" onclick="printContent('result')">Print</button><br><br><br><br>
+<?php
+	if (isset($_SESSION['login_admin'])) {
+		
+		$sql = "SELECT student.Username, Admission_No, books.BookName, AuthorsName, Edition, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = 'Yes' ORDER BY book_requested.Return_Date ASC";
+
+		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+?>
+<div id="result">
+	<table class="tbl">
+		<h2 class="head2">INFORMATION OF BOOKS BORROWED</h2>
+			<tr>
+				<th>Username</th>
+				<th>Admission No</th>
+				<th>BookName</th>
+				<th>AuthorsName</th>
+				<th>Edition</th>
+				<th>Issue Date</th>
+				<th>Return Date</th>
+			</tr>
+<?php
+	while ($row = mysqli_fetch_array($res)) {
+		
+?>
+			<tr>
+				<td><?php echo $row['Username'] ?></td>
+				<td><?php echo $row['Admission_No'] ?></td>
+				<td><?php echo $row['BookName'] ?></td>
+				<td><?php echo $row['AuthorsName'] ?></td>
+				<td><?php echo $row['Edition'] ?></td>
+				<td><?php echo $row['Issue_Date'] ?></td>
+				<td><?php echo $row['Return_Date'] ?></td>
+			</tr>
+<?php
+	}
+?>
+	</table>
+<?php
+	}
+?>
+</div>
+<script>
+	function printContent(el){
+		var restorepage = document.body.innerHTML;
+		var printcontent = document.getElementById(el).innerHTML;
+		document.body.innerHTML = printcontent;
+		window.print();
+		document.body.innerHTML = restorepage;
+	}
+</script>
+</body>
+</html>

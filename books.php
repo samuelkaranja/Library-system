@@ -39,7 +39,7 @@
 					
 					$sql = "INSERT INTO `book_requested` (`BookName`, `Username`) VALUES('$_POST[request]', '$_SESSION[login_user]')";
 
-					$result = mysqli_query($conn, $sql);
+					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 		?>
 					<script>
 						alert('Book request sent for approval.');

@@ -30,6 +30,7 @@
 							  <a href="Studdetails.php">STUDENT DETAILS</a>
 							  <a href="bkreturned.php">BOOKS RETURNED</a>
 							  <a href="bkexpired.php">BOOKS EXPIRED</a>
+							  <a href="books_borrowed.php">BOOKS BORROWED</a>
 						  </div>
 					</div>
 				</ul>
