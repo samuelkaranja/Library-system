@@ -10,7 +10,7 @@
  </head>
  <body>
  <div>
- 	<form method="post" action="" class="approve">
+ 	<form method="post" action="" class="approve" onsubmit="return onClick()">
  		<h2 style="padding: 0px 0px 20px 0px; color: orange; font-size: 30px;">Approve</h2>
  		<!-- <input class="input" type="text" name="approve" id="approve" placeholder="Yes or No" required=""><br><br> -->
  		<input type="text" class="input" name="approve" list="approval" autocomplete="off" placeholder="Yes or No">
@@ -45,6 +45,18 @@
  				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
  			}
  		}
+
+ 		// $d = date("Y/m/d");
+
+ 		// $x = mysqli_query($conn, "SELECT `Return_Date` FROM `book_requested`");
+
+ 		// while ($row = mysqli_fetch_array($x)) {
+ 			
+ 		// 	if ($row['Return_Date'] < $d) {
+ 				
+ 		// 		echo "The return date should be greater than todays date";
+ 		// 	}
+ 		// }
  ?>
  		<script>
  			alert('Book request approved');
@@ -54,7 +66,7 @@
 
  ?>
 
- <!-- <script>
+ <script>
  	function onClick(){
  		var approve = document.getElementById('approve');
  		var issue = document.getElementById('issue');
@@ -80,6 +92,6 @@
  			return false;
  		}
  	}
- </script> -->
+ </script>
  </body>
  </html>
