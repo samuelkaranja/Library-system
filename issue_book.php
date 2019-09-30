@@ -27,6 +27,8 @@
 
  <?php
  	if (isset($_POST['submit'])) {
+
+ 		$d = date(y/m/d);
  		
  		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue_Date` = '$_POST[issue]', `Return_Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
 
@@ -37,6 +39,7 @@
  		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn)); 
 
  		$q = mysqli_query($conn, "SELECT `Quantity` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
+ 		$r = mysqli_query($conn, "SELECT `Return_Date` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
 
  		while ($row = mysqli_fetch_array($q)) {
  			
@@ -46,17 +49,13 @@
  			}
  		}
 
- 		// $d = date("Y/m/d");
-
- 		// $x = mysqli_query($conn, "SELECT `Return_Date` FROM `book_requested`");
-
- 		// while ($row = mysqli_fetch_array($x)) {
+ 		while ($row = mysqli_fetch_array($r)) {
  			
- 		// 	if ($row['Return_Date'] < $d) {
+ 			if ($row['Return_Date'] < $d) {
  				
- 		// 		echo "The return date should be greater than todays date";
- 		// 	}
- 		// }
+ 				echo "Return date is less than todays date";
+ 			}
+ 		}
  ?>
  		<script>
  			alert('Book request approved');
