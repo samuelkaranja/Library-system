@@ -28,7 +28,7 @@
  <?php
  	if (isset($_POST['submit'])) {
 
- 		$d = date(y/m/d);
+ 		$d = date('y/m/d');
  		
  		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue_Date` = '$_POST[issue]', `Return_Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
 

@@ -38,6 +38,7 @@
 				if (isset($_SESSION['login_user'])) {
 					
 					$sql = "INSERT INTO `book_requested` (`BookName`, `Username`) VALUES('$_POST[request]', '$_SESSION[login_user]')";
+					
 
 					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 		?>
@@ -53,6 +54,8 @@
 		<?php	
 				}
 			}
+
+			$r =mysqli_query($conn, "SELECT * FROM `books`");
 		 ?>
 	</div>
 
@@ -120,7 +123,7 @@
 								<th>Department</th>
 							</tr>
 					<?php
-						while($row = mysqli_fetch_array($result)){
+						while($row = mysqli_fetch_array($r)){
 					?>
 							<tr>
 								<td><?php echo $row['ID'] ?></td>
