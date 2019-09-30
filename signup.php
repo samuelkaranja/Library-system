@@ -18,7 +18,7 @@
 			<input class="input" type="text" name="uname" id="uname" placeholder="Username" autocomplete="off"><br><br>
 			<input class="input" type="password" name="pass" id="pass" placeholder="Password" autocomplete="off"><br><br>
 			<input class="input" type="password" name="cpass" id="cpass" placeholder="Confirm Password" autocomplete="off"><br><br>
-			<input class="input" type="" name="admnno" id="admnno" placeholder="Admission Number" autocomplete="off"><br><br>
+			<input class="input" type="number" name="admnno" id="admnno" placeholder="Admission Number" autocomplete="off"><br><br>
 			<!-- class="textfield" value="" id="extra7" name="extra7" -->
 			<input class="input" type = "text" list = "departments" placeholder="Department" name="dept" id="dept" autocomplete="off"> 
 		      <datalist id = "departments">
@@ -33,6 +33,8 @@
 		      </datalist>
 			<br><br>
 			<input class="input" type="" name="year" id="year" placeholder="Year Of Study"><br><br>
+			<input type="file" name="file" id="file" class="inputfile" />
+			<label for="file">Choose a picture</label><br><br>
 			<button class="btn" type="submit" name="submit">Enter</button>
 		</form>
 	</div>
