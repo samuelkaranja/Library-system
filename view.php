@@ -8,7 +8,7 @@
 	<title>Details</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body style="background-image: url('img/lib2.jpg');">
 <section class="bx">
 	<div class="box">
 		<p><a class="link" href="studentdetails.php">STUDENT DETAILS</a></p>

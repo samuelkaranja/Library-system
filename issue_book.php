@@ -26,43 +26,42 @@
  </div>
 
  <?php
- 	if (isset($_POST['submit'])) {
+	 if(isset($_SESSION['login_admin'])){
+	 	if (isset($_POST['submit'])) {
 
- 		$d = date('y/m/d');
- 		
- 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue_Date` = '$_POST[issue]', `Return_Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
+	 		$sql = "UPDATE `book_requested` SET `Approve` = '$_POST[approve]', `Issue_Date` = '$_POST[issue]', `Return_Date` = '$_POST[return]' WHERE username = '$_SESSION[stud_uname]' AND bookname = '$_SESSION[bk_name]'";
 
- 		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+	 		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
- 		$sql = "UPDATE books SET quantity = quantity - 1 WHERE `BookName` = '$_SESSION[bk_name]'"; 
+	 		$sql = "UPDATE books SET quantity = quantity - 1 WHERE `BookName` = '$_SESSION[bk_name]'"; 
 
- 		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn)); 
+	 		$res = mysqli_query($conn, $sql) or die(mysqli_error($conn)); 
 
- 		$q = mysqli_query($conn, "SELECT `Quantity` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
- 		$r = mysqli_query($conn, "SELECT `Return_Date` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
+	 		$q = mysqli_query($conn, "SELECT `Quantity` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
+	 		$r = mysqli_query($conn, "SELECT `Return_Date` FROM books WHERE `BookName` = '$_SESSION[bk_name]'");
 
- 		while ($row = mysqli_fetch_array($q)) {
- 			
- 			if ($row['Quantity'] == 0) {
- 				
- 				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
- 			}
- 		}
-
- 		while ($row = mysqli_fetch_array($r)) {
- 			
- 			if ($row['Return_Date'] < $d) {
- 				
- 				echo "Return date is less than todays date";
- 			}
- 		}
- ?>
- 		<script>
- 			alert('Book request approved');
- 		</script>
- <?php
- 	}
-
+	 		while ($row = mysqli_fetch_array($q)) {
+	 			
+	 			if ($row['Quantity'] == 0) {
+	 				
+	 				$sql = mysqli_query($conn, "UPDATE books SET `status` = 'Not available' WHERE bookname = '$_SESSION[bk_name]'");
+	 			}
+	 		}
+	 			
+	 ?>
+	 		<script>
+	 			alert('Book request approved');
+	 		</script>
+	 <?php
+	 	}
+	}else{
+		
+	?>
+		<script>
+			alert('You must login in first');
+		</script>
+	<?php
+	}
  ?>
 
  <script>

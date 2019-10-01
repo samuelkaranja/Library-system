@@ -50,7 +50,7 @@ if (isset($_SESSION['login_user'])) {
 					<div style="float: right; margin: 40px 20px 10px 0px;">
 						<h2>Your fine is:
 						<?php
-							echo "Kshs ".$_SESSION['day'];
+							echo "Kshs ".$_SESSION['day']." (per book)";
 						?>
 						</h2>
 					</div>

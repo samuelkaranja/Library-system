@@ -17,8 +17,25 @@
 		<input class="input" type="text" name="lname" placeholder="LastName" autocomplete="off"><br><br>
 		<input class="input" type="text" name="uname" placeholder="Username" autocomplete="off"><br><br>
 		<input class="input" type="text" name="admno" placeholder="Admission No" autocomplete="off"><br><br>
-		<input class="input" type="text" name="dept" placeholder="Department" autocomplete="off"><br><br>
-		<input class="input" type="text" name="Year" placeholder="Year of Study" autocomplete="off"><br><br>
+		<input class="input" type="text" list="departments" name="dept" placeholder="Department" autocomplete="off">
+		<datalist id = "departments">
+		        <option value = "ICT">
+		        <option value = "Electrical and Electronic Engineering">
+		        <option value = "Mechanical and Chemical Engineering">
+		        <option value = "Automotive Engineering">
+		        <option value = "Food and Bevarages">
+		        <option value = "Health and Applied sciences">
+		        <option value = "Food and Bevarages">
+		        <option value = "Business studies">
+		</datalist>
+			<br><br>
+		<input class="input" list="study" type="text" name="year" placeholder="Year of Study" autocomplete="off"><br><br>
+		<datalist id = "study">
+		        <option value = "First Year">
+		        <option value = "Second Year">
+		        <option value = "Third Year">
+		        <option value = "Fourth Year">
+		</datalist>
 		<button class="btn" type="submit" name="submit">Update</button>
 	</form>
 	

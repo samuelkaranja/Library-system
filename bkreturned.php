@@ -15,6 +15,11 @@
 	$sql = "SELECT student.Username, Admission_No, books.BookName, AuthorsName, Edition,book_requested.Approve, book_requested.Issue_Date, book_requested.Return_Date FROM student inner join book_requested ON student.Username = book_requested.Username inner join books ON book_requested.BookName = books.BookName WHERE book_requested.Approve = '$var1' ORDER BY book_requested.Return_Date ASC";
 
 	$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+	if (mysqli_num_rows($result) == 0) {
+				
+		echo "<h1>"."There are no book requested"."</h1>";
+	}else{
 ?>
 
 <div id="result">
@@ -48,6 +53,9 @@
 ?>
 </table>
 </div>
+<?php
+	}
+?>
 <script>
 	function printContent(el){
 		var restorepage = document.body.innerHTML;

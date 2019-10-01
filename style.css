@@ -226,13 +226,14 @@ td{
 }
 
 /*..........view page........*/
+
 .box{
 	border:none;
-	margin:20px 500px 20px 500px;
+	margin:20px 550px 20px 550px;
 	text-align: center;
 	padding: 30px;
-	background-color:orange ;
-	box-shadow: 5px 5px 5px 5px grey;
+	background-color: powderblue;
+	/*box-shadow: 5px 5px 5px 5px grey;*/
 }
 
 .link{
@@ -293,7 +294,7 @@ td{
 	padding: 10px 15px;
 	border-radius: 5px;
 	margin-left: 5px;
-	margin-top: -15px; 
+	margin-top: -20px; 
 	float: left;
 }
 

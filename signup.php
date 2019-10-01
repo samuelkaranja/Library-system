@@ -34,7 +34,7 @@
 			<br><br>
 			<input class="input" type="" name="year" id="year" placeholder="Year Of Study"><br><br>
 			<input type="file" name="file" id="file" class="inputfile" />
-			<label for="file">Choose a picture</label><br><br>
+			<label for="file">Select picture</label><br><br>
 			<button class="btn" type="submit" name="submit">Enter</button>
 		</form>
 	</div>
@@ -58,7 +58,8 @@
 			}
 
 			if ($count == 0) {
-				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission_No`, `Department`, `Year_of_Study`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$_POST[pass]', '$_POST[cpass]', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]')";
+
+				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission_No`, `Department`, `Year_of_Study`, `pic`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$_POST[pass]', '$_POST[cpass]', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]', '$_POST[file]')";
 
 				$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
