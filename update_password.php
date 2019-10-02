@@ -22,7 +22,7 @@
 	<?php
 		if (isset($_POST['submit'])) {
 
-			$sql = "UPDATE  `student` SET `Password` =  '$_POST[pass]', `Confirm Password` =  '$_POST[cpass]' WHERE  `username` =  '$_POST[uname]'";
+			$sql = "UPDATE  `student` SET `Password` =  md5('$_POST[pass]'), `Confirm Password` =  md5('$_POST[cpass]') WHERE  `username` =  '$_POST[uname]'";
 
 			$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
@@ -50,22 +50,16 @@
 	<script>
 		function onClick(){
 			var uname = document.getElementById('uname');
-			var admission = document.getElementById('admno');
 			var pass = document.getElementById('pass');
 			var cpass = document.getElementById('cpass');
 
-			if (uname.value.trim() == '' && admission.value.trim() == '' && pass.value.trim() == '' && cpass.value.trim() == 0) {
+			if (uname.value.trim() == '' && pass.value.trim() == '' && cpass.value.trim() == '') {
 					alert('Fill in the blanks below');
 					return false;
 			}
 
 			if (uname.value.trim() == '') {
 				alert('Enter username');
-				return false;
-			}
-
-			if (admission.value.trim() == '') {
-				alert('Enter admission number');
 				return false;
 			}
 

@@ -32,9 +32,15 @@
 		        <option value = "Business studies">
 		      </datalist>
 			<br><br>
-			<input class="input" type="" name="year" id="year" placeholder="Year Of Study"><br><br>
-			<input type="file" name="file" id="file" class="inputfile" />
-			<label for="file">Select picture</label><br><br>
+			<input class="input" type="" list="study" name="year" id="year" placeholder="Year Of Study" autocomplete="off"><br><br>
+			<datalist id = "study">
+		        <option value = "First Year">
+		        <option value = "Second Year">
+		        <option value = "Third Year">
+		        <option value = "Fourth Year">
+			</datalist>
+			<!-- <input type="file" name="file" id="file" class="inputfile" />
+			<label for="file">Select picture</label><br><br> -->
 			<button class="btn" type="submit" name="submit">Enter</button>
 		</form>
 	</div>
@@ -59,7 +65,10 @@
 
 			if ($count == 0) {
 
-				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission_No`, `Department`, `Year_of_Study`, `pic`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$_POST[pass]', '$_POST[cpass]', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]', '$_POST[file]')";
+				$passordmd5 = md5($_POST['pass']);
+				$passmd5 = md5($_POST['cpass']);
+
+				$sql = "INSERT INTO student (`FirstName`, `SecondName`, `LastName`, `Username`, `Password`, `Confirm Password`, `Admission_No`, `Department`, `Year_of_Study`) VALUES('$_POST[fname]', '$_POST[sname]', '$_POST[lname]', '$_POST[uname]', '$passordmd5', '$passmd5', '$_POST[admnno]', '$_POST[dept]', '$_POST[year]')";
 
 				$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 

@@ -21,7 +21,7 @@
 
 	<?php
 		if (isset($_POST['submit'])) {
-			$sql = "SELECT * FROM `student` WHERE Username = '$_POST[uname]' AND password = '$_POST[pass]'";
+			$sql = "SELECT * FROM `student` WHERE Username = '$_POST[uname]' AND password = md5('$_POST[pass]')";
 
 			$res = mysqli_query($conn, $sql);
 
